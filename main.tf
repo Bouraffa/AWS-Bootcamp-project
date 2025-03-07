@@ -5,7 +5,7 @@ resource "aws_vpc" "dev_vpc" {
   enable_dns_support = true
   
   tags       =  {
-    name     = "deham9"
+    name     = "deham21"
   }       
 }
 
@@ -16,7 +16,7 @@ resource "aws_subnet" "public-1" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "deham9"
+    Name = "deham21"
   }
 }
 
@@ -26,7 +26,7 @@ resource "aws_subnet" "private-1" {
   availability_zone = "us-east-1a"
 
   tags = {
-    Name = "deham9" 
+    Name = "deham21" 
   }
 }
 
@@ -37,7 +37,7 @@ resource "aws_subnet" "public-2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "deham9"
+    Name = "deham21"
   }
 }
 
@@ -47,7 +47,7 @@ resource "aws_subnet" "private-2" {
   availability_zone = "us-east-1b"
 
   tags = {
-    Name = "deham9" 
+    Name = "deham21" 
   }
 }
 
@@ -55,7 +55,7 @@ resource "aws_subnet" "private-2" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.dev_vpc.id
   tags = {
-    Name = "deham9"
+    Name = "deham21"
   }
 }
 
@@ -82,7 +82,7 @@ resource "aws_route_table" "RB_Public_RouteTable" {
     gateway_id = aws_internet_gateway.igw.id
   }
   tags = {
-    Name = "deham9"
+    Name = "deham21"
   }
 }
 
@@ -94,7 +94,7 @@ resource "aws_route_table" "RB_Private_RouteTable" {
     gateway_id = aws_internet_gateway.igw.id
   }
   tags = {
-    Name = "deham9"
+    Name = "deham21"
   }
 }
 resource "aws_route_table_association" "Public_Subnet1_Asso" {
